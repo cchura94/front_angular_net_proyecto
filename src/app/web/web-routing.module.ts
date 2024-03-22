@@ -17,17 +17,17 @@ const routes: Routes = [
       {
         path: '',
         component: InicioComponent,
-        canActivate: [authGuard]
+        // canActivate: [authGuard]
       },
       {
         path: 'nosotros',
         component: NosotrosComponent,
-        canActivate: [authGuard]
+        // canActivate: [authGuard]
       },
       {
         path: 'blog',
         component: BlogComponent,
-        canActivate: [authGuard]
+        // canActivate: [authGuard]
       },
       {
         path: 'galeria',

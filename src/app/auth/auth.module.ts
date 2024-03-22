@@ -8,7 +8,9 @@ import { AuthComponent } from './auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from '../core/core.module';
-
+import { MaterialModule } from '../material/material.module';
+// import {MatButtonModule} from '@angular/material/button';
+// import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,10 @@ import { CoreModule } from '../core/core.module';
     AuthRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    MaterialModule
+    // MatButtonModule,
+    // MatButtonToggleModule
   ]
 })
 export class AuthModule { }

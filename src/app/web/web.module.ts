@@ -5,6 +5,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { WebComponent } from './web.component';
+import { MaterialModule } from '../material/material.module';
+// import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { WebComponent } from './web.component';
     WebComponent],
   imports: [
     CommonModule,
-    WebRoutingModule
+    WebRoutingModule,
+    // MatButtonModule
+    MaterialModule
   ]
 })
 export class WebModule { }
