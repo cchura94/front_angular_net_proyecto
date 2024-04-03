@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Lista de Libros</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <button mat-button (click)="openDialogLibro()">Nuevo Libro</button>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID. </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef> Titulo </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="author">
+                <th mat-header-cell *matHeaderCellDef> Autor </th>
+                <td mat-cell *matCellDef="let element"> {{element.author}} </td>
+            </ng-container>
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> price </th>
+                <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+            </ng-container>
+            <ng-container matColumnDef="ordered">
+                <th mat-header-cell *matHeaderCellDef> ordered </th>
+                <td mat-cell *matCellDef="let element"> {{element.ordered}} </td>
+            </ng-container>
+            <ng-container matColumnDef="bookCategoryId">
+                <th mat-header-cell *matHeaderCellDef> bookCategoryId </th>
+                <td mat-cell *matCellDef="let element"> {{element.bookCategoryId}} </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [length]="200" [pageSizeOptions]="[5, 10, 20]" aria-label="Select page">
+        </mat-paginator>
+
+    </mat-card-content>
+</mat-card>

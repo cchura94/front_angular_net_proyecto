@@ -9,10 +9,38 @@
       <a mat-list-item routerLink="/admin/perfil">Mi Perfil</a>
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
+    <mat-list-item routerLink="#">
+      <mat-icon>dashboard</mat-icon><span>Gestión</span>
+    </mat-list-item>
+    <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel-header>
+        Libros
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/admin/categoria">
+          <mat-icon>category</mat-icon> <span>Categoria</span>
+        </a>
+        <a mat-list-item routerLink="/admin/libros">
+          <mat-icon>books</mat-icon> <span>Libros</span>
+        </a>
+      </mat-nav-list>
+    </mat-expansion-panel>
+    <mat-expansion-panel [class.mat-elevation-z0]="true">
+      <mat-expansion-panel-header>
+        Libros
+      </mat-expansion-panel-header>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/admin/categoria">
+          <mat-icon>category</mat-icon> <span>Categoria</span>
+        </a>
+        <a mat-list-item routerLink="/admin/libros">
+          <mat-icon>books</mat-icon> <span>Libros</span>
+        </a>
+      </mat-nav-list>
+    </mat-expansion-panel>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      @if (isHandset$ | async) {
         <button
           type="button"
           aria-label="Toggle sidenav"
@@ -20,7 +48,6 @@
           (click)="drawer.toggle()">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
-      }
       <span>frontend_angular_net</span>
     </mat-toolbar>
     <!-- Add Content Here -->
