@@ -1,7 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Libro } from '../interfaces/libro';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,14 @@ export class LibroService {
 
   funGuardar(datos: any){
     return this.http.post(`${this.urlBase}/Library/AddBook`, datos);
+  }
+
+  funPrestarLibro(obj: any):Observable<any>{
+    let params = new HttpParams();
+    params = params.append('userId', obj.userId)
+    params = params.append('bookId', obj.bookId)
+
+    return this.http.post(`${this.urlBase}/Library/OrderBook`, {}, {params});
   }
 
   

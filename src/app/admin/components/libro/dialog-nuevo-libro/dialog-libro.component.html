@@ -1,16 +1,37 @@
-<h2 mat-dialog-title>Install Angular</h2>
-<mat-dialog-content>
+<h2 mat-dialog-title>Nuevo Libro</h2>
+
+<form #nuevoForm="ngForm"  (ngSubmit)="enviarGuardarDatos(nuevoForm)">
+
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Ingrese Titulo</mat-label>
+            <input matInput name="title" ngModel required>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Ingrese Author</mat-label>
+            <input matInput type="text" name="author" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Ingrese Precio</mat-label>
+            <input matInput type="text" name="price" ngModel required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Ingrese Categoria</mat-label>
+            <input matInput type="text" name="bookCategoryId" ngModel required>
+        </mat-form-field>
+
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-button type="submit" [disabled]="nuevoForm.invalid">Guardar</button>  
+        <button mat-button (click)="cerrarDialog()">Cerrar</button>
+
+    </div>
+    
+
+</form>
 
 
-    <mat-form-field>
-        <input matInput type="text" name="title" ngModel required>
-    </mat-form-field>
-
-    <button mat-button type="button" (click)="enviarGuardarDatos()">Guardar</button>
-
-
-</mat-dialog-content>
-
-<mat-dialog-actions>
-    <button mat-button (click)="cerrarDialog()">Cerrar</button>
-</mat-dialog-actions>

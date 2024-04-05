@@ -9,6 +9,8 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
 import { MaterialModule } from '../material/material.module';
 import { LibroComponent } from './components/libro/libro.component';
 import { DialogLibroComponent } from './components/libro/dialog-nuevo-libro/dialog-libro.component';
+import { FormsModule } from '@angular/forms';
+import { DialogPrestarComponent } from './components/libro/dialog-prestar/dialog-prestar.component';
 
 
 @NgModule({
@@ -17,13 +19,15 @@ import { DialogLibroComponent } from './components/libro/dialog-nuevo-libro/dial
     DashboardComponent,
     CategoriaComponent,
     LibroComponent,
-    DialogLibroComponent
+    DialogLibroComponent,
+    DialogPrestarComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     CoreModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class AdminModule { }

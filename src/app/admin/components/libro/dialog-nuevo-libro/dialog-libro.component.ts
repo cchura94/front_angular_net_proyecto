@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -13,7 +14,9 @@ export class DialogLibroComponent {
         this.dialogRef.close()
     }
 
-    enviarGuardarDatos(){
-        this.dialogRef.close({titulo: "Prueba datos hijo", otro: "otro dato"})
+    enviarGuardarDatos(form:NgForm){
+        if(form.valid){
+            this.dialogRef.close(form.value)
+        }
     }
 }
