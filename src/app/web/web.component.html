@@ -1,8 +1,13 @@
-<h2>Web Component</h2>
-<a routerLink="/">INICIO</a> |
-<a routerLink="/blog">BLOG</a> |
-<a routerLink="/servicios">SERVICIOS</a> |
-<a routerLink="/galeria">GALERIA</a> |
-<a routerLink="/nosotros">ACERCA DE NOSOTROS</a> |
+<mat-toolbar color="primary">
+    <span>Empresa</span>
+    <nav nav-tab-nav-bar>
+        <a mat-button routerLink="/" routerLinkActive="active-link">INICIO</a>        
+        <a mat-button routerLink="/blog">BLOG</a>
+        <a mat-button routerLink="/servicios">SERVICIOS</a>
+        <a mat-button routerLink="/galeria">GALERIA</a>
+        <a mat-button routerLink="/nosotros">ACERCA DE NOSOTROS</a>
+        <a mat-button routerLink="/auth/login">INGRESAR</a>
+    </nav>
+</mat-toolbar>
 
 <router-outlet />

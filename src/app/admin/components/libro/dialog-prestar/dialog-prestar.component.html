@@ -1,11 +1,15 @@
-<h2 mat-dialog-title>Nuevo Libro</h2>
+<h2 mat-dialog-title>Prestar Libro</h2>
 
 <form #nuevoForm="ngForm"  (ngSubmit)="onSubmit(nuevoForm)">
 
     <div mat-dialog-content>
         <mat-form-field>
-            <mat-label>ID User</mat-label>
-            <input matInput name="userId" ngModel required>
+            <mat-label>Selecciona un usuario</mat-label>
+            <mat-select name="user" ngModel required>
+                <mat-option *ngFor="let user of users" [value]="user">
+                    {{user.firstName}} {{user.lastName}} 
+                </mat-option>
+            </mat-select>
         </mat-form-field>
 
     </div>

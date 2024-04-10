@@ -1,2 +1,13 @@
-<h1>Auth Component</h1>
+<mat-toolbar color="primary">
+    <span>Empresa</span>
+    <nav nav-tab-nav-bar>
+        <a mat-button routerLink="/" routerLinkActive="active-link">INICIO</a>        
+        <a mat-button routerLink="/blog">BLOG</a>
+        <a mat-button routerLink="/servicios">SERVICIOS</a>
+        <a mat-button routerLink="/galeria">GALERIA</a>
+        <a mat-button routerLink="/nosotros">ACERCA DE NOSOTROS</a>
+        <a mat-button routerLink="/auth/login">INGRESAR</a>
+    </nav>
+</mat-toolbar>
+
 <router-outlet/>

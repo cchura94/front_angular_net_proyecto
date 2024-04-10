@@ -87,7 +87,7 @@ export class LibroComponent {
       console.log(result)
       if(result){
         let data = {
-          userId: result.userId,
+          userId: result.user.id,
           bookId: libro.id
         }
         this._libroService.funPrestarLibro(data).subscribe(

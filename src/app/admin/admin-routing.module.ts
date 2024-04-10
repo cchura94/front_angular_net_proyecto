@@ -6,6 +6,8 @@ import { authGuard } from '../core/guards/auth.guard';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { LibroComponent } from './components/libro/libro.component';
+import { UsuarioComponent } from './components/ordenes/usuario/usuario.component';
+import { ListaOrdenComponent } from './components/ordenes/lista-orden/lista-orden.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,16 @@ const routes: Routes = [
       {
         path: 'libros',
         component: LibroComponent,
+        canActivate: [authGuard]
+      },
+      {
+        path: 'usuarios',
+        component: UsuarioComponent,
+        canActivate: [authGuard]
+      },
+      {
+        path: 'ordenes',
+        component: ListaOrdenComponent,
         canActivate: [authGuard]
       },
     ]

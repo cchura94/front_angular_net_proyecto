@@ -11,6 +11,10 @@ import { LibroComponent } from './components/libro/libro.component';
 import { DialogLibroComponent } from './components/libro/dialog-nuevo-libro/dialog-libro.component';
 import { FormsModule } from '@angular/forms';
 import { DialogPrestarComponent } from './components/libro/dialog-prestar/dialog-prestar.component';
+import { UsuarioComponent } from './components/ordenes/usuario/usuario.component';
+import { ListaOrdenComponent } from './components/ordenes/lista-orden/lista-orden.component';
+import { ListaUsuarioComponent } from './components/ordenes/usuario/lista-usuario/lista-usuario.component';
+import { VistaPreviaOrdenComponent } from './components/ordenes/usuario/vista-previa-orden/vista-previa-orden.component';
 
 
 @NgModule({
@@ -20,7 +24,11 @@ import { DialogPrestarComponent } from './components/libro/dialog-prestar/dialog
     CategoriaComponent,
     LibroComponent,
     DialogLibroComponent,
-    DialogPrestarComponent
+    DialogPrestarComponent,
+    UsuarioComponent,
+    ListaOrdenComponent,
+    ListaUsuarioComponent,
+    VistaPreviaOrdenComponent
   ],
   imports: [
     CommonModule,
