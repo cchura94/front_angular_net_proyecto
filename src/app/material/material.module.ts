@@ -11,6 +11,8 @@ import {MatInputModule} from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list'
+import { MatListModule } from '@angular/material/list';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 const modulos = [
   MatButtonModule,
@@ -23,7 +25,9 @@ const modulos = [
   MatInputModule,
   MatToolbarModule,
   MatSelectModule,
-  MatGridListModule
+  MatGridListModule,
+  MatListModule,
+  ScrollingModule
   
 ]
 

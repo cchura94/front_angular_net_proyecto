@@ -31,4 +31,8 @@ export class UserService {
   funEliminar(id:number){
     return this.http.delete(`${this.urlBase}/User/${id}`);
   }
+
+  funGetOrdenUser(id:number){
+    return this.http.get(`${this.urlBase}/Library/GetOrdersOFUser?userId=${id}`);
+  }
 }

@@ -1,1 +1,30 @@
-<p>vista-previa-orden works!</p>
+
+@if (ordenes.length>0) {
+    <button mat-flat-button color="primary" (click)="generarPDF()">Ver PDF</button>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Resumen de Préstamos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">
+                @for (orden of ordenes; track $index) {
+                  <div class="example-item">
+
+                      <h3 mat-line>{{ orden.book.title }}</h3>
+                      <p mat-line>Usuario: {{ orden.user.firstName }} {{ orden.user.lastName }}</p>
+                      <p mat-line>Fecha de Préstamo: {{ orden.orderDate|date }}</p>
+  
+                      <p [ngClass]="{'returned': orden.returned}">{{ orden.returned?'Devuelto':'Pendiente de Devolución' }}</p>
+               
+                  </div>
+                }
+
+            </cdk-virtual-scroll-viewport>
+    
+        </mat-card-content>
+    </mat-card>
+
+}
+@if (ordenes.length==0){
+    <p>Nada por mostrar</p>
+}

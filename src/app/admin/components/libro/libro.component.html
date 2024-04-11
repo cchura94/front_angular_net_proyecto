@@ -3,7 +3,12 @@
         <mat-card-title>Lista de Libros</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <button mat-button (click)="openDialogLibro()">Nuevo Libro</button>
+        <button mat-button color="primary" (click)="openDialogLibro()">Nuevo Libro</button>
+
+        <button mat-flat-button color="primary" (click)="exportarExcel()">Exportar Excel</button>
+        
+        <input type="file" (change)="cargaArchivo($event)" multiple="false">
+        
 
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 

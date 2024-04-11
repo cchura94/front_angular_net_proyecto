@@ -1,9 +1,14 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>
-        <h2>Mensaje del hijo: {{mensaje.mensaje}}</h2>
-        <app-lista-usuario [usuarios]="lista_usuarios" (usuarioSeleccionado)="funPadre($event)"></app-lista-usuario>
+<h2>Mensaje del hijo: {{mensaje.mensaje}}</h2>
+<mat-grid-list cols="3">
+    <mat-grid-tile colspan="2">
+
+        <app-lista-usuario [usuarios]="lista_usuarios" (usuarioSeleccionado)="funUsuarioSeleccionado($event)"></app-lista-usuario>
+        
     </mat-grid-tile>
+
     <mat-grid-tile>
-        <app-vista-previa-orden></app-vista-previa-orden>
+
+        <app-vista-previa-orden [ordenes]="lista_ordenes"></app-vista-previa-orden>
+
     </mat-grid-tile>
 </mat-grid-list>

@@ -8,10 +8,12 @@ import { User } from '../../../../../core/interfaces/User';
 })
 export class ListaUsuarioComponent {
   @Input() usuarios: User[] = [];
-  @Output() usuarioSeleccionado = new EventEmitter<any>()
+  @Output() usuarioSeleccionado = new EventEmitter<User>()
 
-  funEnviarAlPadre(){
-    this.usuarioSeleccionado.emit({mensaje: "Este es un mensaje desde el componente Hijo"})
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'mobileNumber', 'accion'];
+
+  funEnviarUserAlPadre(user: User){
+    this.usuarioSeleccionado.emit(user)
   }
 
 }
